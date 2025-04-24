@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Dashboard MICRON</title>
+    <style>
+        body { font-family: Arial, sans-serif; padding: 20px; background-color: #f0f2f5; }
+        h1, h2 { color: #333; }
+        img { max-width: 600px; margin-top: 10px; }
+        table { border-collapse: collapse; width: 100%; margin-bottom: 30px; }
+        th, td { border: 1px solid #ccc; padding: 8px; text-align: center; }
+        th { background-color: #eee; }
+    </style>
+</head>
+<body>
+    <h1>MICRON – Resultados por Escenario</h1>
+
+    <h2>Escenario: SST = 0</h2>
+    {{ tabla_sst0|safe }}
+
+    <h2>Escenario: Inventario Actual</h2>
+    {{ tabla_actual|safe }}
+
+    <h2>Escenario: Inventario Óptimo</h2>
+    {{ tabla_optimo|safe }}
+
+    <h2>Predicción de Demanda</h2>
+    <img src="/static/demanda_pred.png" alt="Predicción de Demanda">
+</body>
+</html>
